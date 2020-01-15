@@ -19,25 +19,28 @@
 %--------------------------------------------------                             
 %                    Packages
 %-------------------------------------------------- 
-\RequirePackage{amssymb} % used to renew nested unordered lists
 \RequirePackage{xltxtra}
 \RequirePackage{geometry}
+\RequirePackage{fontawesome} % from https://github.com/posquit0/latex-fontawesome
 
 %--------------------------------------------------                             
 %                      Fonts
 %--------------------------------------------------
 % Change main font to VictorMono for ligatures
-\setmainfont[Path = fonts/, UprightFont = *-Regular, BoldFont = *-Bold, ItalicFont = *-Italic] {VictorMono}
+\setmainfont[Path = fonts/, UprightFont = *-Regular, BoldFont = *-Bold, ItalicFont = *-Italic, BoldItalicFont = *-BoldItalic] {VictorMono}
 
+\setfontfamily\FA[Path = fonts/]{FontAwesome}
 %--------------------------------------------------                             
 %                  Layout Config
 %-------------------------------------------------- 
 % Notes info
 \newcommand{\class}[1]{\def\@class{#1}}
 
-% Change nested unordered lists and page layout
-\renewcommand{\labelitemii}{$\blacksquare$}
-\renewcommand{\labelitemiii}{$\square$}
+% Change nested unordered lists
+\renewcommand{\labelitemi}{\faCircle}
+\renewcommand{\labelitemii}{\faCircleO}
+\renewcommand{\labelitemiii}{\faCodeFork}
+\renewcommand{\labelitemiv}{\faGithubAlt}
 
 % Custom Title Page
 \renewcommand*{\maketitle}{%
